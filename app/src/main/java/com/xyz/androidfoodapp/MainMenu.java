@@ -12,17 +12,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainMenu extends AppCompatActivity {
+
     Button signinemail,signinphone,signup;
     ImageView bgimage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        final Animation zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
+
+        /*final Animation zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
         final Animation zoomout = AnimationUtils.loadAnimation(this,R.anim.zoomout);
+
         bgimage=findViewById(R.id.back2);
         bgimage.setAnimation(zoomin);
         bgimage.setAnimation(zoomout);
+
         zoomout.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -32,7 +37,6 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 bgimage.startAnimation(zoomin);
-
             }
 
             @Override
@@ -50,7 +54,6 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 bgimage.startAnimation(zoomout);
-
             }
 
             @Override
@@ -58,14 +61,15 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-        signinemail=(Button)findViewById(R.id.SignwithEmail);
-        signinphone=(Button)findViewById(R.id.SignwithPhone);
-        signup=(Button)findViewById(R.id.Signup);
+
+        signinemail = (Button)findViewById(R.id.SignwithEmail);
+        signinphone = (Button)findViewById(R.id.SignwithPhone);
+        signup = (Button)findViewById(R.id.Signup);
 
         signinemail.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent signemail = new Intent(MainMenu.this,ChooseOne.class);
+            public void onClick(View view) {
+                Intent signemail =  new Intent(MainMenu.this,ChooseOne.class);
                 signemail.putExtra("Home","Email");
                 startActivity(signemail);
                 finish();
@@ -74,7 +78,7 @@ public class MainMenu extends AppCompatActivity {
 
         signinphone.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent signphone = new Intent(MainMenu.this,ChooseOne.class);
                 signphone.putExtra("Home","Phone");
                 startActivity(signphone);
@@ -84,19 +88,18 @@ public class MainMenu extends AppCompatActivity {
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent signup = new Intent(MainMenu.this,ChooseOne.class);
                 signup.putExtra("Home","SignUp");
                 startActivity(signup);
                 finish();
             }
-        });
+        });*/
     }
 
-    @Override
+    /*@Override
     protected void onDestroy() {
         super.onDestroy();
         System.gc();
-    }
-
+    }*/
 }

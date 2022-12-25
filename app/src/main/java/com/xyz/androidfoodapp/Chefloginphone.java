@@ -15,56 +15,12 @@ import android.os.Bundle;
 
 public class Chefloginphone extends AppCompatActivity {
 
-    EditText num;
-    Button sendotp,signinemail;
-    TextView signup;
-    CountryCodePicker cpp;
-    FirebaseAuth Fauth;
-    String number;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chefloginphone);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chefloginphone);
-
-        num = (EditText)findViewById(R.id.number);
-        sendotp = (Button)findViewById(R.id.otp);
-        cpp=(CountryCodePicker)findViewById(R.id.CountryCode);
-        signinemail=(Button)findViewById(R.id.Email);
-        signup = (TextView)findViewById(R.id.acsignup);
-
-        Fauth = FirebaseAuth.getInstance();
-
-        sendotp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                number=num.getText().toString().trim();
-                String Phonenum = cpp.getSelectedCountryCodeWithPlus()+number;
-                Intent b = new Intent(Chefloginphone.this,Chefsendotp.class);
-
-                b.putExtra("Phonenum",Phonenum);
-                startActivity(b);
-                finish();
-
-            }
-        });
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Chefloginphone.this,ChefRegistration.class));
-                finish();
-            }
-        });
-        signinemail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Chefloginphone.this,Cheflogin.class));
-                finish();
-            }
-        });
 
     }
 }
