@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/back3"
-    android:background="@drawable/menu_img"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back3"
     tools:context=".ChooseOne">
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="290dp"
-        android:layout_height="420dp"
+        android:layout_width="265dp"
+        android:layout_height="330dp"
         android:background="@drawable/background_shape"
         android:orientation="vertical"
         android:padding="15dp"
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566">
+        app:layout_constraintVertical_bias="0.498">
 
         <TextView
             android:id="@+id/textView"
@@ -30,7 +30,8 @@
             android:fontFamily="serif-monospace"
             android:text="Find homemade food around you or offer your own !"
             android:textAlignment="center"
-            android:textColor="#FF4107AA"
+            android:textStyle="bold"
+            android:textColor="#FF5722"
             android:textSize="18sp" />
 
         <Button
@@ -39,10 +40,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="#FF2222"
+            android:background="#FF5722"
             android:text="Connect As Chef"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/customer"
@@ -52,20 +54,23 @@
             android:layout_marginTop="20dp"
             android:background="#FF5722"
             android:text="Connect As Customer"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/delivery"
-            android:layout_width="197dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            android:background="#F403CC"
+            android:layout_marginBottom="20dp"
+            android:background="#FF5722"
             android:text="Connect As Delivery Person"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

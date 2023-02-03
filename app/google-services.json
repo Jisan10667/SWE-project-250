@@ -41,35 +41,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:130773256868:android:f9b51cad263e855f3df431",
-        "android_client_info": {
-          "package_name": "com.xyz.androidfoodapp"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD3DrnUsHnzXgx9I7xllxcBzgDAmI_zD3g"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"

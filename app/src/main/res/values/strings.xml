@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodOn</string>
+    <string name="app_name">SWE-project-main</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -56,4 +56,5 @@
         <item>Dum chicken</item>
         <item>Hyderabadi Chicken Biryni</item>
     </string-array>
+
 </resources>

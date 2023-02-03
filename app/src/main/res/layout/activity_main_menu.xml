@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu_img"
     tools:context=".MainMenu">
 
     <ImageView
@@ -21,10 +22,10 @@
         android:id="@+id/linearlayout"
         android:layout_width="275dp"
         android:layout_height="390dp"
-        android:background="@drawable/background_shape"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btnblueish"
         android:orientation="vertical"
         android:padding="10dp"
-        android:layout_centerHorizontal="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,11 +34,11 @@
 
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/Food_on_img"
             android:layout_width="157dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/title_img" />
+            app:srcCompat="@drawable/menu_img" />
 
         <TextView
             android:id="@+id/textView2"
@@ -56,7 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/btnred"
+            android:backgroundTint="@color/OffWhite"
             android:drawableLeft="@drawable/whitemail"
+            android:hapticFeedbackEnabled="false"
             android:paddingLeft="10dp"
             android:text="SigIn with Email"
             android:textColor="#FFFFFF" />
@@ -67,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btnblueish"
+            android:background="@drawable/btnred"
             android:drawableLeft="@drawable/phonewhite"
             android:gravity="center"
             android:paddingLeft="10dp"
@@ -115,10 +118,11 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/button_shape"
             android:text="Signup"
             android:textColor="#FFFFFF" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
