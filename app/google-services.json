@@ -1,33 +1,70 @@
 {
   "project_info": {
-    "project_number": "633946605805",
-    "project_id": "food-order-c7123",
-    "storage_bucket": "food-order-c7123.appspot.com"
+    "project_number": "130773256868",
+    "project_id": "sweprojectmain",
+    "storage_bucket": "sweprojectmain.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:633946605805:android:c0e64513e5e17d778364e4",
+        "mobilesdk_app_id": "1:130773256868:android:4a7518849b3efcbb3df431",
         "android_client_info": {
-          "package_name": "com.xyz.androidfoodapp"
+          "package_name": "com.firsttry.swe_project_main"
         }
       },
       "oauth_client": [
         {
-          "client_id": "633946605805-kue63omo85g9bs99c51ni9sph1715cut.apps.googleusercontent.com",
+          "client_id": "130773256868-guku9f1212ddaoc40i9lrhkeuh7irbts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firsttry.swe_project_main",
+            "certificate_hash": "e1d1e114373ca5109e903c4abd525870b964344f"
+          }
+        },
+        {
+          "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC7NLrQ1t9vA-en2tsXB8B7cxcE43TfMu8"
+          "current_key": "AIzaSyD3DrnUsHnzXgx9I7xllxcBzgDAmI_zD3g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "633946605805-kue63omo85g9bs99c51ni9sph1715cut.apps.googleusercontent.com",
+              "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130773256868:android:f9b51cad263e855f3df431",
+        "android_client_info": {
+          "package_name": "com.xyz.androidfoodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3DrnUsHnzXgx9I7xllxcBzgDAmI_zD3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130773256868-nim08i2oq74fnp7gsettl6hpp3p0huco.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
