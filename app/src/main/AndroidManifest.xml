@@ -13,6 +13,20 @@
         android:theme="@style/Theme.SWEprojectmain"
         tools:targetApi="31">
         <activity
+            android:name=".ChefForgotPassword"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ChefFoodPanel_BottomNavigation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Delivery_Registration"
             android:exported="false">
             <meta-data
