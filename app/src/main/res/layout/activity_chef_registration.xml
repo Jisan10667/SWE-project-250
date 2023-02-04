@@ -17,9 +17,10 @@
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436">
+        app:layout_constraintVertical_bias="0.552">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,9 +36,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="FirstName"
+                    android:hint="@string/firstname"
                     android:inputType="text"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:textColorHint="#616161"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,8 +52,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="LastName"
-                    android:inputType="text" />
+                    android:hint="@string/lastname"
+                    android:inputType="text"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -63,10 +66,11 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/whitemail"
+                    android:drawableStart="@drawable/whitemail"
                     android:drawablePadding="10dp"
-                    android:hint="Email id"
-                    android:inputType="textEmailAddress" />
+                    android:hint="@string/email_id_cr"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -79,8 +83,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
+                    android:hint="@string/password_r"
+                    android:inputType="textPassword"
+                    android:textColorHint="#616161"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -93,8 +99,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword" />
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -118,7 +125,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="MobileNumber"
+                        android:hint="@string/mobilenumber"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
@@ -132,8 +139,10 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="House/Streert no"
-                    android:inputType="text" />
+                    android:hint="@string/house_streert_no"
+                    android:inputType="text"
+                    android:textColorHint="#616161"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -144,9 +153,11 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Area"
-                    android:inputType="textMultiLine" />
+                    android:layout_height="50dp"
+                    android:hint="@string/area"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#616161"
+                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -158,36 +169,42 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Pin Code"
-                    android:inputType="number" />
+                    android:hint="@string/pin_code"
+                    android:inputType="number"
+                    tools:ignore="TextContrastCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="State"
+                android:text="@string/state"
                 android:textSize="14sp" />
 
             <Spinner
                 android:id="@+id/Statee"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="10dp"
-                android:entries="@array/State" />
+                android:entries="@array/State"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/txt4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="City" />
+                android:text="@string/city"
+                android:textColor="#757575"
+                tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/Citys"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:entries="@array/State"
+                android:minHeight="48dp" />
 
             <Button
                 android:id="@+id/Signup"
@@ -195,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_shape"
-                android:text="Register"
+                android:text="@string/register"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
@@ -216,12 +233,12 @@
 
                 <TextView
                     android:id="@+id/OR"
-                    android:layout_width="44dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="7dp"
                     android:layout_weight="1"
-                    android:text="OR"
+                    android:text="@string/or_r"
                     android:textAlignment="center"
                     android:textColor="#040404"
                     android:textSize="17sp" />
@@ -239,7 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="SignIn with"
+                android:text="@string/signin_with_r"
                 android:textAlignment="center"
                 android:textColor="#0C0C0C"
                 android:textSize="18sp" />
@@ -259,7 +276,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
-                    android:drawableLeft="@drawable/whitemail"
+                    android:drawableStart="@drawable/whitemail"
                     android:padding="1dp"
                     android:text="Email"
                     android:textColor="#FFFFFF"

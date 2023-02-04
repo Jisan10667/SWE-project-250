@@ -29,13 +29,16 @@
             android:id="@+id/Demail"
             android:layout_marginTop="15dp"
             android:paddingBottom="10dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/graymail"
+                android:drawableStart="@drawable/graymail"
                 android:drawablePadding="10dp"
-                android:hint="Email id"
-                android:inputType="textEmailAddress"/>
+                android:hint="@string/email_id"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -50,15 +53,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
-                android:hint="Password"
-                android:inputType="textPassword"/>
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Dforgotpass"
-            android:text="Forgot Password?"
+            android:text="@string/forgot_password"
             android:gravity="end"
             android:textSize="16sp"
             android:textColor="#090909"/>
@@ -69,7 +74,7 @@
             android:id="@+id/Loginbtn"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_shape"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="18sp"
             android:textColor="#FFFF"/>
         <TextView
@@ -77,7 +82,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/donot"
             android:layout_gravity="center"
-            android:text="Don't Have An Account? Create"
+            android:text="@string/don_t_have_an_account_create"
             android:layout_marginTop="10dp"
             android:textColor="#090909"
             android:textSize="16sp"/>
@@ -95,10 +100,10 @@
                 android:layout_marginTop="20dp"
                 android:background="#090909"/>
             <TextView
-                android:layout_width="44dp"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/OR"
-                android:text="OR"
+                android:text="@string/or_d"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:textColor="#090909"/>
@@ -114,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signphone"
-            android:text="SignIn With"
+            android:text="@string/signin_with_d"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_marginTop="11dp"
@@ -126,9 +131,9 @@
             android:id="@+id/Dbtnphone"
             android:layout_gravity="center"
             android:background="@drawable/btnblueish"
-            android:text="Phone"
+            android:text="@string/phone"
             android:layout_marginTop="13dp"
-            android:drawableLeft="@drawable/phonewhite"
+            android:drawableStart="@drawable/phonewhite"
             android:padding="10dp"
             android:textColor="#FFFF"/>
 
