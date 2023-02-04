@@ -37,7 +37,7 @@ public class Cheflogin extends AppCompatActivity {
             email = (TextInputLayout)findViewById(R.id.Lemail);
             pass = (TextInputLayout)findViewById(R.id.Lpassword);
             Signin = (Button)findViewById(R.id.button4);
-            signup = (TextView) findViewById(R.id.textView3);
+            signup = (TextView) findViewById(R.id.signphone);
             Forgotpassword = (TextView)findViewById(R.id.forgotpass);
             Signinphone = (Button)findViewById(R.id.btnphone);
 
