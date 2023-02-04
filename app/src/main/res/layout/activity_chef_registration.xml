@@ -252,14 +252,14 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tvv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/signin_with_r"
-                android:textAlignment="center"
-                android:textColor="#0C0C0C"
-                android:textSize="18sp" />
+            android:id="@+id/tvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/signin_with_cr"
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -272,30 +272,32 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
                     android:drawableStart="@drawable/whitemail"
                     android:padding="1dp"
-                    android:text="Email"
+                    android:text="@string/email_cr"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnblueish"
-                    android:drawableLeft="@drawable/phonewhite"
+                    android:drawableStart="@drawable/phonewhite"
                     android:drawablePadding="5dp"
                     android:padding="1dp"
-                    android:text="Phone"
+                    android:text="@string/phone_cr"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
         </LinearLayout>

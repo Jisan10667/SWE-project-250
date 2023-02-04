@@ -38,6 +38,9 @@
     <string name="password_r">Password</string>
     <string name="email_id_cr">Email id</string>
     <string name="lastname">LastName</string>
+    <string name="email_cr">Email</string>
+    <string name="phone_cr">Phone</string>
+    <string name="signin_with_cr">SignIn with</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
