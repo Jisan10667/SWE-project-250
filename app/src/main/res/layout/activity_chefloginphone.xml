@@ -8,8 +8,8 @@
     tools:context=".Chefloginphone">
 
     <LinearLayout
-        android:layout_width="280dp"
-        android:layout_height="400dp"
+        android:layout_width="300dp"
+        android:layout_height="420dp"
         android:id="@+id/linearlayout"
         android:background="@drawable/background_shape"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Verify Phone Number"
+            android:text="@string/verify_phone_number"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textColor="#090909"
@@ -35,16 +35,19 @@
 
             <com.hbb20.CountryCodePicker
                 android:layout_width="100dp"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:id="@+id/CountryCode"/>
 
             <EditText
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:hint="Phone Number"
                 android:id="@+id/number"
-                android:layout_marginLeft="8dp"
-                android:inputType="number"/>
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
@@ -52,7 +55,7 @@
             android:id="@+id/otp"
             android:layout_marginTop="30dp"
             android:background="@drawable/button_shape"
-            android:text="Send OTP"
+            android:text="@string/send_otp"
             android:textColor="@color/white"
             android:textSize="18sp"/>
         <TextView
@@ -60,7 +63,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/acsignup"
             android:layout_marginTop="13dp"
-            android:text="Don't Have An Account? SignUp"
+            android:text="@string/don_t_have_an_account_signup"
             android:textAlignment="center"
             android:textColor="@color/Black"
             android:textSize="16sp"/>
@@ -79,11 +82,11 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/Black"/>
             <TextView
-                android:layout_width="44dp"
+                android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/OR"
                 android:layout_gravity="center"
-                android:text="OR"
+                android:text="@string/or"
                 android:textColor="@color/Black"
                 android:layout_marginTop="6dp"
                 android:textSize="16sp"
@@ -103,7 +106,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/signphone"
             android:layout_marginTop="20dp"
-            android:text="SignIn With"
+            android:text="@string/signin_with"
             android:textAlignment="center"
             android:textColor="@color/Black"
             android:textSize="18sp"/>
@@ -112,10 +115,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnEmail"
             android:background="@drawable/btnred"
-            android:text="Email"
+            android:text="@string/email"
             android:layout_marginTop="15dp"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/whitemail"
+            android:drawableStart="@drawable/whitemail"
             android:padding="10dp"
             android:layout_gravity="center"/>
 

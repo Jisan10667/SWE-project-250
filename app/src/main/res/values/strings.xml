@@ -3,6 +3,17 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="verify_phone_number">Verify Phone Number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="don_t_have_an_account_signup">Don\'t Have An Account? SignUp</string>
+    <string name="or">OR</string>
+    <string name="signin_with">SignIn With</string>
+    <string name="email">Email</string>
+    <string name="find_homemade_food_around_you_or_offer_your_own">Find homemade food around you or offer your own !</string>
+    <string name="connect_as_chef">Connect As Chef</string>
+    <string name="connect_as_customer">Connect As Customer</string>
+    <string name="connect_as_delivery_person">Connect As Delivery Person</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
