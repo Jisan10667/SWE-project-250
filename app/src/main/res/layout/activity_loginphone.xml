@@ -42,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/number"
                 android:layout_marginLeft="8dp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:autofillHints="" />
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
@@ -110,10 +111,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnEmail"
             android:background="@drawable/btnred"
-            android:text="Email"
+            android:text="@string/email_lp"
             android:layout_marginTop="15dp"
             android:textColor="@color/white"
-            android:drawableLeft="@drawable/whitemail"
+            android:drawableStart="@drawable/whitemail"
             android:padding="10dp"
             android:layout_gravity="center"/>
 

@@ -35,7 +35,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="FirstName"
+                    android:hint="@string/firstname_rp"
                     android:inputType="text" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -49,7 +49,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="LastName"
+                    android:hint="@string/lastname_rp"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,9 +62,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/graymail"
+                    android:drawableStart="@drawable/graymail"
                     android:drawablePadding="10dp"
-                    android:hint="Email id"
+                    android:hint="@string/email_id_rp"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,7 +78,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
+                    android:hint="@string/password_rp"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +92,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Confirm Password"
+                    android:hint="@string/confirm_password_rp"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -117,7 +117,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="MobileNumber"
+                        android:hint="@string/mobilenumber_rp"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
@@ -132,7 +132,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Local Address"
+                    android:hint="@string/local_address_rp"
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,7 +145,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Area"
+                    android:hint="@string/area_rp"
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,15 +158,15 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Pin Code"
+                    android:hint="@string/pin_code_rp"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/txt1"
+                android:id="@+id/state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="State"
+                android:text="@string/state_rp"
                 android:textSize="14sp" />
 
             <Spinner
@@ -174,14 +174,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:entries="@array/State" />
+                android:entries="@array/State"
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/txt4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
-                android:text="City" />
+                android:text="@string/city_rp" />
 
             <Spinner
                 android:id="@+id/Citys"
@@ -195,7 +196,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button_shape"
-                android:text="Register"
+                android:text="@string/register_rp"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
@@ -216,12 +217,12 @@
 
                 <TextView
                     android:id="@+id/OR"
-                    android:layout_width="44dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="7dp"
                     android:layout_weight="1"
-                    android:text="OR"
+                    android:text="@string/or_rp"
                     android:textAlignment="center"
                     android:textColor="#040404"
                     android:textSize="17sp" />
@@ -239,7 +240,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="SignIn with"
+                android:text="@string/signin_with_rp"
                 android:textAlignment="center"
                 android:textColor="#0C0C0C"
                 android:textSize="18sp" />
@@ -255,28 +256,30 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
-                    android:drawableLeft="@drawable/whitemail"
+                    android:drawableStart="@drawable/whitemail"
                     android:padding="10dp"
-                    android:text="Email"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/email_r_p"
+                    android:textColor="#FFFFFF"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnblueish"
-                    android:drawableLeft="@drawable/phonewhite"
+                    android:drawableStart="@drawable/phonewhite"
                     android:drawablePadding="5dp"
                     android:padding="8dp"
-                    android:text="Phone"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/phone_rp"
+                    android:textColor="#FFFFFF"
+                    style="?android:attr/buttonBarButtonStyle" />
             </LinearLayout>
 
         </LinearLayout>

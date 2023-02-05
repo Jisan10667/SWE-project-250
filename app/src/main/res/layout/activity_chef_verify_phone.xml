@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter OTP"
+            android:text="@string/enter_otp"
             android:textSize="20sp"
             android:textColor="@color/DarkBlue"
             android:layout_gravity="center"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="15dp"
-            android:hint="OTP"
+            android:hint="@string/otp"
             android:ems="10"
             android:id="@+id/code"/>
         <Button
@@ -43,7 +43,7 @@
             android:layout_marginTop="40dp"
             android:id="@+id/Verify"
             android:background="@drawable/btnblueish"
-            android:text="Verify"
+            android:text="@string/verify"
             android:textSize="18sp"
             android:textColor="@color/white"/>
         <Button
@@ -52,7 +52,7 @@
             android:layout_marginTop="15dp"
             android:id="@+id/Resendotp"
             android:textColor="@color/white"
-            android:text="Resend OTP"
+            android:text="@string/resend_otp"
             android:background="@drawable/btnblueish"
             android:textSize="18sp"/>
         <TextView

@@ -41,10 +41,80 @@
     <string name="email_cr">Email</string>
     <string name="phone_cr">Phone</string>
     <string name="signin_with_cr">SignIn with</string>
+    <string name="phone_rp">Phone</string>
+    <string name="email_r_p">Email</string>
+    <string name="signin_with_rp">SignIn with</string>
+    <string name="or_rp">OR</string>
+    <string name="firstname_rp">FirstName</string>
+    <string name="lastname_rp">LastName</string>
+    <string name="email_id_rp">Email id</string>
+    <string name="password_rp">Password</string>
+    <string name="confirm_password_rp">Confirm Password</string>
+    <string name="mobilenumber_rp">MobileNumber</string>
+    <string name="local_address_rp">Local Address</string>
+    <string name="area_rp">Area</string>
+    <string name="pin_code_rp">Pin Code</string>
+    <string name="state_rp">State</string>
+    <string name="city_rp">City</string>
+    <string name="register_rp">Register</string>
+    <string name="firstname_dr">FirstName</string>
+    <string name="lastname_dr">LastName</string>
+    <string name="email_id_dr">Email id</string>
+    <string name="password_dr">Password</string>
+    <string name="confirm_password_dr">Confirm Password</string>
+    <string name="mobilenumber_dr">MobileNumber</string>
+    <string name="house_streert_no_dr">House/Streert no</string>
+    <string name="area_dr">Area</string>
+    <string name="pin_code_dr">Pin Code</string>
+    <string name="state_dr">State</string>
+    <string name="register_dr">Register</string>
+    <string name="or_dr">OR_dr</string>
+    <string name="email_dr">Email</string>
+    <string name="phone_dr">Phone</string>
+    <string name="signin_with_dr">SignIn with</string>
+    <string name="email_id_cl">Email id</string>
+    <string name="forgot_password_cl">Forgot Password?</string>
+    <string name="password_cl">Password</string>
+    <string name="login_cl">Login</string>
+    <string name="account">Don\'t Have An Account? Create</string>
+    <string name="or_cl">OR</string>
+    <string name="phone_cl">Phone</string>
+    <string name="signin_with_cl">SignIn With</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="otp">OTP</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="phone_l">Phone</string>
+    <string name="signin_with_l">SignIn With</string>
+    <string name="or_l">OR</string>
+    <string name="acc">Don\'t Have An Account? Create</string>
+    <string name="login_l">Login</string>
+    <string name="forgot_password_l">Forgot Password?</string>
+    <string name="password_l">Password</string>
+    <string name="email_id_l">Email id</string>
+    <string name="email_lp">Email</string>
 
     <string-array name="State">
-        <item>Maharashtra</item>
-        <item>Gujarat</item>
+        <item>Dhaka</item>
+        <item>Chattogram</item>
+        <item>Rajshahi</item>
+        <item>Barishal</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Mymensingh</item>
+
+    </string-array>
+
+    <string-array name="City">
+        <item>Dhaka</item>
+        <item>Chattogram</item>
+        <item>Rajshahi</item>
+        <item>Barishal</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Mymensingh</item>
     </string-array>
 
     <string-array name="shipper">

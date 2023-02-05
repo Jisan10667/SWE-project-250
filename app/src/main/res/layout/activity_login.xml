@@ -32,9 +32,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/graymail"
+                android:drawableStart="@drawable/graymail"
                 android:drawablePadding="10dp"
-                android:hint="Email id"
+                android:hint="@string/email_id_l"
                 android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
-                android:hint="Password"
+                android:hint="@string/password_l"
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/forgotpass"
-            android:text="Forgot Password?"
+            android:text="@string/forgot_password_l"
             android:gravity="end"
             android:textSize="16sp"
             android:textColor="#090909"/>
@@ -69,7 +69,7 @@
             android:id="@+id/button4"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_shape"
-            android:text="Login"
+            android:text="@string/login_l"
             android:textSize="18sp"
             android:textColor="#FFFF"/>
         <TextView
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
             android:layout_gravity="center"
-            android:text="Don't Have An Account? Create"
+            android:text="@string/acc"
             android:layout_marginTop="10dp"
             android:textColor="#090909"
             android:textSize="16sp"/>
@@ -98,7 +98,7 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/OR"
-                android:text="OR"
+                android:text="@string/or_l"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
                 android:textColor="#090909"/>
@@ -114,7 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signphone"
-            android:text="SignIn With"
+            android:text="@string/signin_with_l"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_marginTop="11dp"
@@ -126,9 +126,9 @@
             android:id="@+id/btnphone"
             android:layout_gravity="center"
             android:background="@drawable/btnblueish"
-            android:text="Phone"
+            android:text="@string/phone_l"
             android:layout_marginTop="13dp"
-            android:drawableLeft="@drawable/phonewhite"
+            android:drawableStart="@drawable/phonewhite"
             android:padding="10dp"
             android:textColor="#FFFF"/>
 

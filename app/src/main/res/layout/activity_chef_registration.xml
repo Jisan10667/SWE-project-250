@@ -7,9 +7,11 @@
     android:background="@drawable/ch5"
     tools:context=".ChefRegistration">
 
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="292dp"
-        android:layout_height="514dp"
+        android:layout_height="618dp"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:background="@drawable/background_shape"
@@ -20,7 +22,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +53,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/lastname"
                     android:inputType="text"
                     tools:ignore="TextContrastCheck" />
@@ -65,7 +67,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:drawableStart="@drawable/whitemail"
                     android:drawablePadding="10dp"
                     android:hint="@string/email_id_cr"
@@ -82,7 +84,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/password_r"
                     android:inputType="textPassword"
                     android:textColorHint="#616161"
@@ -98,7 +100,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword"
                     tools:ignore="TextContrastCheck" />
@@ -124,9 +126,10 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:hint="@string/mobilenumber"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:textColorHint="#757575" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -138,7 +141,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/house_streert_no"
                     android:inputType="text"
                     android:textColorHint="#616161"
@@ -168,43 +171,26 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/pin_code"
                     android:inputType="number"
-                    tools:ignore="TextContrastCheck" />
+                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/txt1"
+                android:id="@+id/state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/state"
+                android:text="City"
                 android:textSize="14sp" />
 
             <Spinner
-                android:id="@+id/Statee"
+                android:id="@+id/City"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
                 android:entries="@array/State"
                 tools:ignore="DuplicateSpeakableTextCheck" />
-
-            <TextView
-                android:id="@+id/txt4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/city"
-                android:textColor="#757575"
-                tools:ignore="TextContrastCheck" />
-
-            <Spinner
-                android:id="@+id/Citys"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:entries="@array/State"
-                android:minHeight="48dp" />
 
             <Button
                 android:id="@+id/Signup"
@@ -228,7 +214,7 @@
                     android:id="@+id/hr"
                     android:layout_width="105dp"
                     android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="#595858" />
 
                 <TextView
@@ -241,39 +227,39 @@
                     android:text="@string/or_r"
                     android:textAlignment="center"
                     android:textColor="#040404"
-                    android:textSize="17sp" />
+                    android:textSize="10sp" />
 
                 <TableRow
                     android:id="@+id/dr"
                     android:layout_width="105dp"
                     android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="#595858" />
             </LinearLayout>
 
             <TextView
-            android:id="@+id/tvv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/signin_with_cr"
-            android:textAlignment="center"
-            android:textColor="#0C0C0C"
-            android:textSize="18sp" />
+                android:id="@+id/tvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/signin_with_cr"
+                android:textAlignment="center"
+                android:textColor="#0C0C0C"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="15dp">
 
                 <Button
                     android:id="@+id/email"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
                     android:drawableStart="@drawable/whitemail"
@@ -281,14 +267,16 @@
                     android:text="@string/email_cr"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    app:iconTint="@color/Red"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
                 <Button
                     android:id="@+id/phone"
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnblueish"
                     android:drawableStart="@drawable/phonewhite"
@@ -297,7 +285,7 @@
                     android:text="@string/phone_cr"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:visibility="visible" />
             </LinearLayout>
 
         </LinearLayout>
