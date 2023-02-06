@@ -19,6 +19,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".chefFoodPanel.chef_postDish"></activity>
         <activity
             android:name=".ChefFoodPanel_BottomNavigation"
             android:exported="false">
@@ -103,6 +104,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
