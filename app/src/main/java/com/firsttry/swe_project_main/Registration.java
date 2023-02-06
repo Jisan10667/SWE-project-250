@@ -29,8 +29,8 @@ import java.util.HashMap;
 
 public class Registration extends AppCompatActivity {
 
-    String[] Maharashtra = {"Mumbai","Pune","Nashik"};
-    String[] Madhyapradesh = {"Bhopal","Indore","Ujjain"};
+    String[] Dhaka = {"Narayanganj","Gazipur","Faridpur","Dhaka"};
+    String[] Sylhet = {"Moulavi-bajar","Habiganj","Netrokona"};
 
     TextInputLayout Fname,Lname,Email,Pass,cpass,mobileno,localaddress,area,pincode;
     Spinner Statespin,Cityspin;
@@ -71,17 +71,17 @@ public class Registration extends AppCompatActivity {
 
                 Object value = parent.getItemAtPosition(position);
                 statee = value.toString().trim();
-                if(statee.equals("Maharashtra")){
+                if(statee.equals("Dhaka")){
                     ArrayList<String> list = new ArrayList<>();
-                    for (String cities : Maharashtra){
+                    for (String cities : Dhaka){
                         list.add(cities);
                     }
                     ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Registration.this,android.R.layout.simple_spinner_item,list);
                     Cityspin.setAdapter(arrayAdapter);
                 }
-                if(statee.equals("Madhyapradesh")){
+                if(statee.equals("Sylhet")){
                     ArrayList<String> list = new ArrayList<>();
-                    for (String cities : Madhyapradesh){
+                    for (String cities : Sylhet){
                         list.add(cities);
                     }
                     ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(Registration.this,android.R.layout.simple_spinner_item,list);
