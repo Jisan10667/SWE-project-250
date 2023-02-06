@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/text"
             android:layout_gravity="center_horizontal"
-            android:text=""
+            android:text="............."
             android:layout_marginTop="15dp"
             android:textAlignment="center"
             android:textColor="@color/gray"
