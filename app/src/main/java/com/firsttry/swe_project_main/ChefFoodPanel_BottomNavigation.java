@@ -6,7 +6,11 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.firsttry.swe_project_main.customerFoodPanel.CustomerHomeFragment;
+import com.firsttry.swe_project_main.customerFoodPanel.CustomerTrackFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.firsttry.swe_project_main.chefFoodPanel.*;
 
@@ -19,6 +23,27 @@ public class ChefFoodPanel_BottomNavigation extends AppCompatActivity implements
         setContentView(R.layout.activity_chef_food_panel__bottom_navigation);
         BottomNavigationView navigationView = findViewById(R.id.chef_bottom_navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+        String name = getIntent().getStringExtra("PAGE");
+        //FragmentManager fragmentManager = getSupportFragmentManager();
+        //FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if(name!=null)
+        {
+            if(name.equalsIgnoreCase("Orderpage")){
+                loadcheffragment(new ChefPendingOrderFragment());
+            }
+            else if(name.equalsIgnoreCase("ConfirmPage")){
+                loadcheffragment(new ChefOrderFragment());
+            }
+            else if(name.equalsIgnoreCase("AcceptOrderPage")){
+                loadcheffragment(new ChefOrderFragment());
+            }
+            else if(name.equalsIgnoreCase("DeliveredPage")){
+                loadcheffragment(new ChefOrderFragment());
+            }
+        }
+        else {
+            loadcheffragment(new ChefHomeFragment());
+        }
     }
 
     @Override
