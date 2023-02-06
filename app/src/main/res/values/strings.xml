@@ -43,8 +43,8 @@
     <string name="signin_with_cr">SignIn with</string>
 
     <string-array name="State">
-        <item>Maharashtra</item>
-        <item>Gujarat</item>
+        <item>Dhaka</item>
+        <item>Sylhet</item>
     </string-array>
 
     <string-array name="shipper">
