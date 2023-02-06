@@ -93,6 +93,13 @@
     <string name="password_l">Password</string>
     <string name="email_id_l">Email id</string>
     <string name="email_lp">Email</string>
+    <string name="verify_phone_number_dlp">Verify Phone Number</string>
+    <string name="phone_number_dlp">Phone Number</string>
+    <string name="send_otp_dlp">Send OTP</string>
+    <string name="acc_dlp">Don\'t Have An Account? SignUp</string>
+    <string name="or_dlp">OR</string>
+    <string name="signin_with_dlp">SignIn With</string>
+    <string name="email_dlp">Email</string>
 
     <string-array name="State">
         <item>Dhaka</item>
