@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SWE-project-main</string>
     <string name="title_home">Home</string>
+    <string name="slogan">No matter where you are: whether you are at home, or in the office, or on the beach.
+we will find you and we will food you</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="verify_phone_number">Verify Phone Number</string>

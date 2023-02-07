@@ -4,15 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/bg_f"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/eatme_logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/slogan"
+            android:textColor="@color/white"
+            android:text="@string/slogan"
+            android:textStyle="bold"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/startbtn"
         android:layout_centerHorizontal="true"
-        android:layout_margin="300dp"
+        android:layout_margin="600dp"
         android:background="#30ffffff"
         android:text="Get Started"
         android:textStyle="bold"
