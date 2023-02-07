@@ -51,7 +51,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/lastname"
                     android:inputType="text"
                     tools:ignore="TextContrastCheck" />
@@ -65,8 +65,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/whitemail"
+                    android:layout_height="50dp"
+                    android:drawableStart="@drawable/graymail"
                     android:drawablePadding="10dp"
                     android:hint="@string/email_id_cr"
                     android:inputType="textEmailAddress"
@@ -124,7 +124,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:hint="@string/mobilenumber"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -138,7 +138,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/house_streert_no"
                     android:inputType="text"
                     android:textColorHint="#616161"
@@ -168,7 +168,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:hint="@string/pin_code"
                     android:inputType="number"
                     tools:ignore="TextContrastCheck" />
@@ -215,7 +215,8 @@
                 android:text="@string/register"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -272,13 +273,14 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
-                    android:drawableStart="@drawable/whitemail"
-                    android:padding="1dp"
-                    android:text="@string/email_cr"
+                    android:drawableLeft="@drawable/whitemail"
+                    android:padding="10dp"
+                    android:text="Email"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
                     style="?android:attr/buttonBarButtonStyle" />
@@ -287,17 +289,17 @@
                     android:id="@+id/phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnblueish"
-                    android:drawableStart="@drawable/phonewhite"
+                    android:drawableLeft="@drawable/phonewhite"
                     android:drawablePadding="5dp"
-                    android:padding="1dp"
-                    android:text="@string/phone_cr"
-                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:text="Phone"
                     android:textStyle="bold"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
         </LinearLayout>

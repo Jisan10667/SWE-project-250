@@ -252,9 +252,11 @@
 
                 <Button
                     android:id="@+id/emaillid"
-                    android:layout_width="95dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnred"
                     android:drawableLeft="@drawable/whitemail"
@@ -264,10 +266,11 @@
 
                 <Button
                     android:id="@+id/Phonenumber"
-                    android:layout_width="97dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="35dp"
                     android:layout_weight="1"
                     android:background="@drawable/btnblueish"
                     android:drawableLeft="@drawable/phonewhite"
