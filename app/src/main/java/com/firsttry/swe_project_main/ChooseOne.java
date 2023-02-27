@@ -3,6 +3,7 @@ package com.firsttry.swe_project_main;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class ChooseOne extends AppCompatActivity {
     String type;
     ConstraintLayout bgimage;
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,8 @@ public class ChooseOne extends AppCompatActivity {
         Chef = (Button)findViewById(R.id.chef);
         Customer = (Button)findViewById(R.id.customer);
         DeliveryPerson = (Button)findViewById(R.id.delivery);
-
+//code
+// jhgjhv
 
         Chef.setOnClickListener(new View.OnClickListener() {
             @Override
