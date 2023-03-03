@@ -8,16 +8,20 @@
     android:layout_height="match_parent"
     tools:context=".SignUp">
 
-    <!--<ImageView
-        android:id="@+id/back2"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitXY"
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_mainmenu" />-->
+        app:layout_constraintVertical_bias="0.436">
 
     <LinearLayout
         android:id="@+id/linearlayout"
@@ -86,6 +90,71 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_dob_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_dob"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/gray_mail"
+                android:drawablePadding="10dp"
+                android:hint="Date Of Birth (dd/mm/yyyy)"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_gender"
+            android:text="Gender"
+            android:textSize="18sp"
+            android:layout_marginTop="11dp" ></TextView>
+        
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/signup_gender_group">
+
+            <RadioButton
+                android:id="@+id/signup_radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/signup_radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                tools:ignore="TouchTargetSizeCheck"></RadioButton>
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_mobile_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Mobile Number"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/signup_pass_l2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,6 +166,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_conpass_l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_conpass"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Confirm Password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,6 +197,16 @@
             android:textSize="23sp"
             android:textStyle="bold"
             tools:visibility="visible" />
+        
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_progressbar"
+            android:elevation="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+        </ProgressBar>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -177,5 +271,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
+        </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
