@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/email/baseline_email_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/person/baseline_person_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="636363" />
-                            <entry key="outputName" value="graymail" />
+                            <entry key="outputName" value="gray_person" />
                             <entry key="sourceFile" value="C:\Users\ASUS\AndroidStudioProjects\SWEprojectmain" />
                           </map>
                         </option>
