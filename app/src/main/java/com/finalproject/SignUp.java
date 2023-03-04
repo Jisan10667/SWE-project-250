@@ -143,8 +143,8 @@ public class SignUp extends AppCompatActivity {
             etRegPassword.requestFocus();
         }else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             Toast.makeText(SignUp.this,"Please re-enter your email",Toast.LENGTH_LONG).show();
-            etRegPassword.setError("Valid email is required");
-            etRegPassword.requestFocus();
+            etRegEmail.setError("Valid email is required");
+            etRegEmail.requestFocus();
         }else if (TextUtils.isEmpty(name)){
             Toast.makeText(SignUp.this,"Please enter your name",Toast.LENGTH_LONG).show();
             etRegName.setError("Name cannot be empty");
@@ -207,7 +207,7 @@ public class SignUp extends AppCompatActivity {
                                 firebaseUser.sendEmailVerification();
                                 Toast.makeText(SignUp.this, "User registered successfully and Please verify your email", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(SignUp.this,SignIn.class);
+                                Intent intent = new Intent(SignUp.this,UserProfile.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                                 finish();

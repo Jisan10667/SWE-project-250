@@ -11,8 +11,12 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.util.Patterns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +25,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignIn extends AppCompatActivity {
@@ -31,7 +37,10 @@ public class SignIn extends AppCompatActivity {
     private Button btnSignin;
     private TextView tvRegisterHere;
 
-    FirebaseAuth mAuth;
+    public static final String Tag = "SignIn";
+
+    ProgressBar progressbar;
+    FirebaseAuth mmAuth;
 
     ConstraintLayout bgimage;
 
@@ -61,29 +70,51 @@ public class SignIn extends AppCompatActivity {
         signin_pass = findViewById(R.id.signin_pass);
         tvRegisterHere = findViewById(R.id.tvSignupHere);
         btnSignin = findViewById(R.id.SignIn_button);
+        progressbar = findViewById(R.id.signin_progressbar);
 
-        mAuth = FirebaseAuth.getInstance();
-
-        btnSignin.setOnClickListener(view -> {
-            loginUser();
-        });
-        tvRegisterHere.setOnClickListener(view ->{
-            startActivity(new Intent(SignIn.this, SignUp.class));
-        });
+        mmAuth = FirebaseAuth.getInstance();
 
         signin_email = (TextInputEditText) findViewById(R.id.signin_email);
         signin_pass = (TextInputEditText) findViewById(R.id.signin_pass);
         btnSignin = (Button) findViewById(R.id.SignIn_button);
 
-        btnSignin.setOnClickListener(view -> {
+        /*btnSignin.setOnClickListener(view -> {
             //loginUser();
+
             if(signin_email.getText().length()>0 && signin_pass.getText().length()>0){
                 loginUser(signin_email.getText().toString(),signin_pass.getText().toString());
             }
             else{
                 Toast.makeText(getApplicationContext(),"Give correct email and password",Toast.LENGTH_SHORT).show();
             }
+        });*/
+
+        btnSignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = signin_email.getText().toString();
+                String password = signin_pass.getText().toString();
+
+                if (TextUtils.isEmpty(email)){
+                    Toast.makeText(SignIn.this,"Please enter your email",Toast.LENGTH_LONG).show();
+                    signin_email.setError("Email cannot be empty");
+                    signin_email.requestFocus();
+                } else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    Toast.makeText(SignIn.this,"Please re-enter your email",Toast.LENGTH_LONG).show();
+                    signin_email.setError("Valid email is required");
+                    signin_email.requestFocus();
+                }else if (TextUtils.isEmpty(password)){
+                    Toast.makeText(SignIn.this,"Please enter your password",Toast.LENGTH_LONG).show();
+                    signin_pass.setError("Password cannot be empty");
+                    signin_pass.requestFocus();
+                }else{
+                    progressbar.setVisibility(View.VISIBLE);
+                    loginUser(email,password);
+                }
+
+            }
         });
+
 
         tvRegisterHere = findViewById(R.id.tvSignupHere);
         tvRegisterHere.setOnClickListener(view ->{
@@ -93,59 +124,38 @@ public class SignIn extends AppCompatActivity {
 
     private void loginUser(String email, String password)
     {
-       // Toast.makeText(getApplicationContext(),"YOOOOOOOOOO!",Toast.LENGTH_SHORT).show();
-        if (TextUtils.isEmpty(email)){
-            signin_email.setError("Email cannot be empty");
-            signin_email.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
-            signin_pass.setError("Password cannot be empty");
-            signin_pass.requestFocus();
-        }else{
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
+        mmAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(SignIn.this,new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+
+                    FirebaseUser firebaseUser = mmAuth.getCurrentUser();
+                    if(firebaseUser.isEmailVerified()){
                         Toast.makeText(SignIn.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SignIn.this, Home.class));
                     }else{
+                        firebaseUser.sendEmailVerification();
+                        mmAuth.signOut();
+                        showAlertDialog();
+                    }
+
+                    startActivity(new Intent(SignIn.this, Home.class));
+                }else{
+                    try{
+                        throw task.getException();
+                    }catch(FirebaseAuthInvalidUserException e){
+                        signin_email.setError("User does not exist or is no longer valid. Please register again");
+                        signin_email.requestFocus();
+                    }catch(FirebaseAuthInvalidCredentialsException e){
+                        signin_email.setError("Invalid credentials. Kindly check and re-enter");
+                        signin_email.requestFocus();
+                    }catch (Exception e){
+                        Log.e(Tag, e.getMessage());
                         Toast.makeText(SignIn.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
-            });
-        }
-    }
-    private void loginUser(){
-        String email = signin_email.getText().toString();
-        String password = signin_pass.getText().toString();
-
-        if (TextUtils.isEmpty(email)){
-            signin_email.setError("Email cannot be empty");
-            signin_email.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
-            signin_pass.setError("Password cannot be empty");
-            signin_pass.requestFocus();
-        }else{
-            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-
-                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                        if(firebaseUser.isEmailVerified()){
-                            Toast.makeText(SignIn.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
-                        }else{
-                            firebaseUser.sendEmailVerification();
-                            mAuth.signOut();
-                            showAlertDialog();
-                        }
-
-                        startActivity(new Intent(SignIn.this, Home.class));
-                    }else{
-                        Toast.makeText(SignIn.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-        }
+                progressbar.setVisibility(View.GONE);
+            }
+        });
     }
 
     private void showAlertDialog() {
@@ -167,4 +177,15 @@ public class SignIn extends AppCompatActivity {
         alertDialog.show();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mmAuth.getCurrentUser()!=null){
+            Toast.makeText(SignIn.this, "Already logged in ", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(SignIn.this,UserProfile.class));
+            finish();
+        }else{
+            Toast.makeText(SignIn.this, "You can login now", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
