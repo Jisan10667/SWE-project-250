@@ -44,6 +44,14 @@ public class UserProfile extends AppCompatActivity {
         tvmobile = findViewById(R.id.show_mobile);
         userprogressbar = findViewById(R.id.user_progressbar);
 
+        imageview = findViewById(R.id.profile_dp);
+        imageview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserProfile.this, UploadProfilePicActivity.class);
+                startActivity(intent);
+            }
+        });
         profileauth = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = profileauth.getCurrentUser();
 
