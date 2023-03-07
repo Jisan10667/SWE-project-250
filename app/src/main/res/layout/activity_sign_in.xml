@@ -19,6 +19,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bg_mainmenu" />-->
 
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/background_shape"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.436">
+
     <LinearLayout
         android:id="@+id/linearlayout"
         android:layout_width="300dp"
@@ -114,6 +128,19 @@
             android:textStyle="bold"
             tools:visibility="visible" />
 
+        <Button
+            android:id="@+id/forgot_pass_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_blueish"
+            android:text="Forgot Password"
+            android:textColor="#5E35B1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:visibility="visible" />
+
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -186,5 +213,8 @@
 
 
     </LinearLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
