@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class UserProfile extends AppCompatActivity {
 
@@ -111,6 +113,11 @@ public class UserProfile extends AppCompatActivity {
                     tvdob.setText(dob);
                     tvgender.setText(gender);
                     tvmobile.setText(mobile);
+
+                    Uri uri = firebaseUser.getPhotoUrl();
+                    Picasso.get().load(uri).into(imageview);
+                }else {
+                    Toast.makeText(UserProfile.this, "Something went wrong! ", Toast.LENGTH_LONG).show();
                 }
                 userprogressbar.setVisibility(View.GONE);
             }
