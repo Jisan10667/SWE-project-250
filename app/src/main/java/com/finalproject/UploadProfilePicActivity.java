@@ -152,13 +152,15 @@ public class UploadProfilePicActivity extends AppCompatActivity {
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);
-        }/*else if(id == R.id.menu_update_profile){
-            Intent intent = new Intent(UserProfile.this,UpdateProfileActivity.class);
+        }else if(id == R.id.menu_update_profile){
+            Intent intent = new Intent(UploadProfilePicActivity.this,UpdateProfileActivity.class);
             startActivity(intent);
+            finish();
         }else if(id == R.id.menu_update_email){
-            Intent intent = new Intent(UserProfile.this,UpdateEmailActivity.class);
+            Intent intent = new Intent(UploadProfilePicActivity.this,UpdateEmailActivity.class);
             startActivity(intent);
-        }else if(id == R.id.menu_settings){
+            finish();
+        }/*else if(id == R.id.menu_settings){
             //Intent intent = new Intent(UserProfile.this,UserProfileActivity.class);
             //startActivity(intent);
             Toast.makeText(UserProfile.this,"menu settings",Toast.LENGTH_LONG).show();

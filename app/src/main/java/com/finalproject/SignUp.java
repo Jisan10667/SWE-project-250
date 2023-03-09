@@ -111,6 +111,7 @@ public class SignUp extends AppCompatActivity {
                 picker.show();
             }
         });
+
         btnRegister.setOnClickListener(view ->{
             createUser();
         });
