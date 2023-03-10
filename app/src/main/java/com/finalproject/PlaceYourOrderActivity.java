@@ -36,10 +36,10 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_place_your_order);
 
         RestaurantModel restaurantModel = getIntent().getParcelableExtra("RestaurantModel");
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle(restaurantModel.getName());
-        //actionBar.setSubtitle(restaurantModel.getAddress());
-        //actionBar.setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(restaurantModel.getName());
+        actionBar.setSubtitle(restaurantModel.getAddress());
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         inputName = findViewById(R.id.inputName);
         inputAddress = findViewById(R.id.inputAddress);

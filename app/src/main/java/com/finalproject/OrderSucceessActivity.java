@@ -17,6 +17,7 @@ public class OrderSucceessActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_succeess);
 
+        getSupportActionBar().setTitle("Order Successful");
 
         RestaurantModel restaurantModel = getIntent().getParcelableExtra("RestaurantModel");
         /*ActionBar actionBar = getSupportActionBar();

@@ -3,6 +3,7 @@ package com.finalproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -38,6 +39,9 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
 
+        getSupportActionBar().setTitle("Your Profile");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         tvwelcome = findViewById(R.id.show_welcome);
         tvname = findViewById(R.id.show_name);
         tvemail = findViewById(R.id.show_email);
@@ -54,17 +58,17 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         profileauth = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = profileauth.getCurrentUser();
 
         if(firebaseUser == null){
-            Toast.makeText(UserProfile.this, "Something went wrong. User details", Toast.LENGTH_LONG).show();
+            Toast.makeText(UserProfile.this, "Something went wrong. User details are not available at this moment ", Toast.LENGTH_LONG).show();
         }else{
             checkIfEmailVerified(firebaseUser);
             userprogressbar.setVisibility(View.VISIBLE);
             showUserProfile(firebaseUser);
         }
-
 
     }
 
@@ -110,6 +114,7 @@ public class UserProfile extends AppCompatActivity {
 
                     tvwelcome.setText("Welcome " + name + "! ");
                     tvname.setText(name);
+                    tvemail.setText(email);
                     tvdob.setText(dob);
                     tvgender.setText(gender);
                     tvmobile.setText(mobile);
@@ -139,7 +144,10 @@ public class UserProfile extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id== R.id.menu_refresh){
+        if(id==android.R.id.home){
+            NavUtils.navigateUpFromSameTask(UserProfile.this);
+        }
+        else if(id== R.id.menu_refresh){
             startActivity(getIntent());
             finish();
             overridePendingTransition(0,0);

@@ -32,7 +32,7 @@ public class UpdateEmailActivity extends AppCompatActivity {
     private TextView tvAuthenticated;
     private String userOldEmail, userNewEmail, userPassword;
     private Button btnUpdateEmail;
-    private EditText etNewEmail, etPassword;
+    private EditText etOldEmail, etNewEmail, etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,7 @@ public class UpdateEmailActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.update_email_progressbar);
         etPassword = findViewById(R.id.et_updatemail_password);
         etNewEmail = findViewById(R.id.et_updatemail_newemail);
+        etOldEmail = findViewById(R.id.et_updatemail_email);
         tvAuthenticated = findViewById(R.id.tv_update_email_head2);
         btnUpdateEmail = findViewById(R.id.btn_updatemail_email);
 
@@ -55,7 +56,7 @@ public class UpdateEmailActivity extends AppCompatActivity {
 
         userOldEmail = firebaseUser.getEmail();
         TextView tvOldEmail = findViewById(R.id.tv_updatemail_email);
-        tvOldEmail.setText(userOldEmail);
+        etOldEmail.setText(userOldEmail);
 
         if(firebaseUser.equals("")){
             Toast.makeText(UpdateEmailActivity.this,"Something went wrong",Toast.LENGTH_LONG).show();

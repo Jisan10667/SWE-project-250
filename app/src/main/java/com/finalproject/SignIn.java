@@ -51,6 +51,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        getSupportActionBar().setTitle("Sign In");
 
         AnimationDrawable animationDrawable = new AnimationDrawable();
         animationDrawable.addFrame(getResources().getDrawable(R.drawable.ch1),3000);
@@ -130,7 +131,7 @@ public class SignIn extends AppCompatActivity {
 
                     FirebaseUser firebaseUser = mmAuth.getCurrentUser();
                     if(firebaseUser.isEmailVerified()){
-                        Toast.makeText(SignIn.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignIn.this, "You logged in now", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(SignIn.this,UserProfile.class));
                         finish();
                     }else{

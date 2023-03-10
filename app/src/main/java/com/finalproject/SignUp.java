@@ -30,6 +30,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -61,7 +62,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        //getSupportActionBar().setTitle("Sign Up");
+        getSupportActionBar().setTitle("Sign Up");
         Toast.makeText(SignUp.this,"You can register now",Toast.LENGTH_LONG).show();
 
         AnimationDrawable animationDrawable = new AnimationDrawable();
@@ -191,12 +192,15 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void registerUser(String name, String email, String dob, String gender, String mobile, String password) {
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(SignUp.this,new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-
+                    Toast.makeText(SignUp.this, "User registered successfully", Toast.LENGTH_SHORT).show();
                     FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
+                    UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder().setDisplayName(name).build();
+                    firebaseUser.updateProfile(profileChangeRequest);
 
                     ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(name,dob,gender,mobile);
                     DatabaseReference referenceProfile = FirebaseDatabase.getInstance().getReference("Register Users");
@@ -215,13 +219,11 @@ public class SignUp extends AppCompatActivity {
                             }
                             else{
                                 Toast.makeText(SignUp.this, "User registration failed. Please Try again", Toast.LENGTH_SHORT).show();
-                                regprogressbar.setVisibility(View.GONE);
+
                             }
+                            regprogressbar.setVisibility(View.GONE);
                         }
                     });
-
-
-                    //startActivity(new Intent(SignUp.this, SignIn.class));
                 }else{
                     try{
                         throw task.getException();
@@ -237,6 +239,7 @@ public class SignUp extends AppCompatActivity {
                     } catch (Exception e){
                         Log.e(Tag, e.getMessage());
                     }
+                    regprogressbar.setVisibility(View.GONE);
                     Toast.makeText(SignUp.this, "Registration Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
