@@ -144,7 +144,7 @@
             <ProgressBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/forgot_pass_progressbar"
+                android:id="@+id/update_email_progressbar"
                 android:elevation="10dp"
                 android:layout_below="@+id/btn_updatemail_email"
                 android:layout_marginTop="30dp"
