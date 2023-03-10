@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class UserProfile extends AppCompatActivity {
     private ProgressBar userprogressbar;
     private String name,email,dob,gender,mobile;
     private ImageView imageview;
+    private Button btnSeeRestaurants;
     private FirebaseAuth profileauth;
 
     @Override
@@ -55,6 +57,15 @@ public class UserProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(UserProfile.this, UploadProfilePicActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSeeRestaurants = findViewById(R.id.btn_see_restaurants);
+        btnSeeRestaurants.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserProfile.this, Home.class);
                 startActivity(intent);
             }
         });

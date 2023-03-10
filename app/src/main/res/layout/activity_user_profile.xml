@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfile"
-    android:background="@color/gray">
+    android:background="@drawable/ch3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,14 +15,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@drawable/background_shape">
+            android:background="@color/light_yellow">
 
             <ImageView
                 android:id="@+id/profile_dp"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/bg_mainmenu" />
+                android:background="@drawable/profile" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:padding="15dp"
             android:layout_margin="15dp"
-            android:background="#7EEFBE8B">
+            android:background="#90B1E3EA">
             
             <TextView
                 android:layout_width="wrap_content"
@@ -144,10 +144,23 @@
             android:id="@+id/user_progressbar"
             android:elevation="10dp"
             android:layout_below="@+id/div_mobile"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:visibility="visible">
         </ProgressBar>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_see_restaurants"
+            android:text="See restaurants"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_blueish">
+
+        </Button>
 
     </LinearLayout>
 

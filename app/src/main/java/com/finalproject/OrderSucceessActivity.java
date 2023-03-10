@@ -20,10 +20,10 @@ public class OrderSucceessActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Order Successful");
 
         RestaurantModel restaurantModel = getIntent().getParcelableExtra("RestaurantModel");
-        /*ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(restaurantModel.getName());
         actionBar.setSubtitle(restaurantModel.getAddress());
-        actionBar.setDisplayHomeAsUpEnabled(false);*/
+        actionBar.setDisplayHomeAsUpEnabled(false);
 
 
         TextView buttonDone = findViewById(R.id.buttonDone);
