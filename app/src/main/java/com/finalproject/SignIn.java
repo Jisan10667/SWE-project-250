@@ -35,6 +35,7 @@ public class SignIn extends AppCompatActivity {
     private TextInputEditText signin_email;
     private TextInputEditText signin_pass;
     private Button btnSignin;
+    private Button btnforgotpass;
     private TextView tvRegisterHere;
 
     public static final String Tag = "SignIn";
@@ -50,6 +51,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        getSupportActionBar().setTitle("Sign In");
 
         AnimationDrawable animationDrawable = new AnimationDrawable();
         animationDrawable.addFrame(getResources().getDrawable(R.drawable.ch1),3000);
@@ -70,6 +72,7 @@ public class SignIn extends AppCompatActivity {
         signin_pass = findViewById(R.id.signin_pass);
         tvRegisterHere = findViewById(R.id.tvSignupHere);
         btnSignin = findViewById(R.id.SignIn_button);
+        btnforgotpass = findViewById(R.id.forgot_pass_button);
         progressbar = findViewById(R.id.signin_progressbar);
 
         mmAuth = FirebaseAuth.getInstance();
@@ -78,16 +81,6 @@ public class SignIn extends AppCompatActivity {
         signin_pass = (TextInputEditText) findViewById(R.id.signin_pass);
         btnSignin = (Button) findViewById(R.id.SignIn_button);
 
-        /*btnSignin.setOnClickListener(view -> {
-            //loginUser();
-
-            if(signin_email.getText().length()>0 && signin_pass.getText().length()>0){
-                loginUser(signin_email.getText().toString(),signin_pass.getText().toString());
-            }
-            else{
-                Toast.makeText(getApplicationContext(),"Give correct email and password",Toast.LENGTH_SHORT).show();
-            }
-        });*/
 
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,6 +108,13 @@ public class SignIn extends AppCompatActivity {
             }
         });
 
+        btnforgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SignIn.this,"You can reset your password now",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SignIn.this,ForgotPasswordActivity.class));
+            }
+        });
 
         tvRegisterHere = findViewById(R.id.tvSignupHere);
         tvRegisterHere.setOnClickListener(view ->{
@@ -131,14 +131,15 @@ public class SignIn extends AppCompatActivity {
 
                     FirebaseUser firebaseUser = mmAuth.getCurrentUser();
                     if(firebaseUser.isEmailVerified()){
-                        Toast.makeText(SignIn.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignIn.this, "You logged in now", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(SignIn.this,UserProfile.class));
+                        finish();
                     }else{
                         firebaseUser.sendEmailVerification();
                         mmAuth.signOut();
                         showAlertDialog();
                     }
 
-                    startActivity(new Intent(SignIn.this, Home.class));
                 }else{
                     try{
                         throw task.getException();

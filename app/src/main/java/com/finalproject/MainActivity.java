@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setTitle("Start Your Journey");
+
         button = (Button) findViewById(R.id.getstart);
 
         button.setOnClickListener(new View.OnClickListener() {

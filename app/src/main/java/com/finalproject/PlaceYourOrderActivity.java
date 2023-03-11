@@ -1,12 +1,14 @@
 package com.finalproject;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,6 +23,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.finalproject.model.* ;
 import com.finalproject.adapters.* ;
+
+import java.util.Calendar;
+
 public class PlaceYourOrderActivity extends AppCompatActivity {
 
     private EditText inputName, inputAddress, inputCity, inputState, inputZip,inputCardNumber, inputCardExpiry, inputCardPin ;
@@ -30,16 +35,18 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
     private boolean isDeliveryOn;
     private PlaceYourOrderAdapter placeYourOrderAdapter;
 
+    DatePickerDialog picker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_your_order);
 
         RestaurantModel restaurantModel = getIntent().getParcelableExtra("RestaurantModel");
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle(restaurantModel.getName());
-        //actionBar.setSubtitle(restaurantModel.getAddress());
-        //actionBar.setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(restaurantModel.getName());
+        actionBar.setSubtitle(restaurantModel.getAddress());
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         inputName = findViewById(R.id.inputName);
         inputAddress = findViewById(R.id.inputAddress);
@@ -57,6 +64,24 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         switchDelivery = findViewById(R.id.switchDelivery);
 
         cartItemsRecyclerView = findViewById(R.id.cartItemsRecyclerView);
+
+        inputCardExpiry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Calendar calendar = Calendar.getInstance();
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
+
+                picker = new DatePickerDialog(PlaceYourOrderActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
+                        inputCardExpiry.setText(i2+"/"+(i1+1)+"/"+i);
+                    }
+                },year,month,day);
+                picker.show();
+            }
+        });
 
         buttonPlaceYourOrder.setOnClickListener(new View.OnClickListener() {
             @Override

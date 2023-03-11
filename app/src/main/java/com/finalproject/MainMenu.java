@@ -14,6 +14,8 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        getSupportActionBar().setTitle("Main Menu");
+
         Button signinbutton = (Button) findViewById(R.id.btnSignIn);
         Button signupbutton = (Button) findViewById(R.id.btnSignUp);
 

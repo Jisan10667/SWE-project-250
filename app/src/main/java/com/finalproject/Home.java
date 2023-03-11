@@ -30,7 +30,7 @@ public class Home extends AppCompatActivity  implements RestaurantListAdapter.Re
         setContentView(R.layout.activity_home);
 
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("Restaurant List");
+        actionBar.setTitle("Restaurant List");
 
         List<RestaurantModel> restaurantModelList =  getRestaurantData();
         initRecyclerView(restaurantModelList);

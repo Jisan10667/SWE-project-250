@@ -211,6 +211,7 @@
             android:visibility="gone">
 
         </ProgressBar>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -276,6 +277,6 @@
 
     </LinearLayout>
 
-        </ScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
