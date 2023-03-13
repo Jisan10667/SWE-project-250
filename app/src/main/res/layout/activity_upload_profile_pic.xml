@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_mainmenu"
+    android:background="@color/white"
     tools:context=".UploadProfilePicActivity">
 
     <RelativeLayout
@@ -12,13 +12,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:padding="15dp"
-        android:background="@drawable/background_shape">
+        android:background="@color/light_yellow">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_profile_head"
             android:text="Upload Your Profile Picture"
+            android:textColor="@color/Black"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:textAlignment="center"
@@ -42,7 +43,7 @@
             android:id="@+id/iv_profile"
             android:layout_below="@id/btn_choose"
             android:layout_marginTop="20dp"
-            android:background="@color/gray"/>
+            android:background="@color/lightgray"/>
 
         <Button
             android:layout_width="match_parent"
@@ -53,6 +54,7 @@
             android:layout_marginRight="70dp"
             android:layout_marginLeft="70dp"
             android:text="Upload Photo"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@drawable/btn_green"/>
 
@@ -64,7 +66,7 @@
             android:layout_below="@+id/btn_upload"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:visibility="visible">
+            android:visibility="gone">
         </ProgressBar>
 
     </RelativeLayout>

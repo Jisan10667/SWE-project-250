@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfile"
-    android:background="@drawable/ch3">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,6 +49,7 @@
                 android:id="@+id/show_name"
                 android:drawablePadding="10dp"
                 android:hint="Loading"
+                android:textColor="@color/Black"
                 app:drawableStartCompat="@drawable/gray_person"
                 android:layout_marginStart="5dp"
                 android:textSize="20sp"/>
@@ -68,6 +69,7 @@
                 android:drawablePadding="10dp"
                 android:layout_marginTop="15dp"
                 android:hint="Loading"
+                android:textColor="@color/Black"
                 app:drawableStartCompat="@drawable/gray_mail"
                 android:layout_marginStart="5dp"
                 android:textSize="20sp"/>
@@ -87,6 +89,7 @@
                 android:drawablePadding="10dp"
                 android:layout_marginTop="15dp"
                 android:hint="Loading"
+                android:textColor="@color/Black"
                 app:drawableStartCompat="@drawable/gray_calendar"
                 android:layout_marginStart="5dp"
                 android:textSize="20sp"/>
@@ -106,7 +109,8 @@
                 android:drawablePadding="10dp"
                 android:layout_marginTop="15dp"
                 android:hint="Loading"
-                app:drawableStartCompat="@drawable/gray_person"
+                android:textColor="@color/Black"
+                app:drawableStartCompat="@drawable/gender_gray"
                 android:layout_marginStart="5dp"
                 android:textSize="20sp"/>
             <View
@@ -125,6 +129,7 @@
                 android:drawablePadding="10dp"
                 android:layout_marginTop="15dp"
                 android:hint="Loading"
+                android:textColor="@color/Black"
                 app:drawableStartCompat="@drawable/gray_phone"
                 android:layout_marginStart="5dp"
                 android:textSize="20sp"/>
@@ -146,7 +151,7 @@
             android:layout_below="@+id/div_mobile"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:visibility="visible">
+            android:visibility="gone">
         </ProgressBar>
 
         <Button

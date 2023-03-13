@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgray"
+    android:background="@color/white"
     tools:context=".UpdateProfileActivity">
 
     <RelativeLayout
@@ -12,13 +12,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:padding="15dp"
-        android:background="@color/white">
+        android:background="@color/light_yellow">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tv_update_head"
             android:text="You can update your Profile details now"
+            android:textColor="@color/Black"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
@@ -40,6 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_update_name"
             android:hint="Enter your registered email"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/Black"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="6dp"
@@ -62,7 +66,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_update_dob"
             android:hint="Enter your date of birth"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
             android:inputType="textEmailAddress"
+            android:textColor="@color/Black"
             android:minHeight="48dp"
             android:padding="6dp"
             android:textSize="20sp" />
@@ -126,6 +133,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_update_mobile"
             android:hint="Enter your mobile number"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/Black"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:padding="6dp"

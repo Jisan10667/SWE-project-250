@@ -6,20 +6,21 @@
     android:layout_height="wrap_content"
     android:background="@color/light_yellow">
 
-<androidx.cardview.widget.CardView android:id="@+id/cardView"
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/light_yellow"
+    android:background="@drawable/btn_blueish"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:cardCornerRadius="10dp"
-    android:layout_margin="20dp"
-    >
+    android:layout_margin="20dp">
 
     <ImageView android:id="@+id/thumbImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:src="@drawable/eatme_logo"
         android:layout_gravity="start"
         android:layout_margin="10dp"
         />

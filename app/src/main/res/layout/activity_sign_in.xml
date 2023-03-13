@@ -8,17 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".SignIn">
 
-    <!--<ImageView
-        android:id="@+id/back2"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_mainmenu" />-->
-
     <ScrollView
         android:layout_width="300dp"
         android:layout_height="500dp"
@@ -37,7 +26,7 @@
         android:id="@+id/linearlayout"
         android:layout_width="300dp"
         android:layout_height="500dp"
-        android:background="@drawable/background_shape"
+        android:background="@color/light_yellow"
         android:orientation="vertical"
         android:padding="10dp"
         android:layout_centerHorizontal="true"
@@ -71,13 +60,18 @@
             android:id="@+id/signin_name_l"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Name"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
             android:layout_marginTop="15dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/signin_name"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Name"
+                android:drawableStart="@drawable/gray_person"
+                android:drawablePadding="10dp"
+                android:textColor="@color/Black"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +81,9 @@
             android:id="@+id/signin_email_l"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Email Id"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
             android:layout_marginTop="11dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -95,7 +92,7 @@
                 android:id="@+id/signin_email"
                 android:drawableStart="@drawable/gray_mail"
                 android:drawablePadding="10dp"
-                android:hint="Email id"
+                android:textColor="@color/Black"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,13 +101,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/Black"
+            android:hint="Password"
+            app:hintTextColor="@color/darkgreen"
+            android:textColorHint="@color/gray"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/signin_pass"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Password"
+                android:textColor="@color/Black"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -196,6 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Not registered yet"
+                android:textColor="@color/Black"
                 android:textSize="16sp"/>
 
             <TextView
