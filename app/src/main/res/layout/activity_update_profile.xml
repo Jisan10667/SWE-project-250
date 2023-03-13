@@ -68,8 +68,8 @@
             android:hint="Enter your date of birth"
             app:hintTextColor="@color/darkgreen"
             android:textColorHint="@color/gray"
-            android:inputType="textEmailAddress"
             android:textColor="@color/Black"
+            android:inputType="date"
             android:minHeight="48dp"
             android:padding="6dp"
             android:textSize="20sp" />
