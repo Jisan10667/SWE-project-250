@@ -33,11 +33,12 @@ By clicking this, you can enjoy all over the app-view through screenshots.
 
 ## Authors
 
-[@Jisan Ahmed](https://github.com/Jisan10667)
+-[@Jisan Ahmed](https://github.com/Jisan10667)
 REG NO: 2019831040
-<img src="https://github.com/Jisan10667/SWE-project-250/blob/main/Image/1678814908588.jpg" width="250" height="250" />
-![1678814908588](https://user-images.githubusercontent.com/65423479/225098485-90b7c764-894c-47ac-9899-4976cdc9d7ca.jpg)
+-<img src="https://github.com/Jisan10667/SWE-project-250/blob/main/Image/1678814908588.jpg" width="350" height="350" />
 
-[@Horipriya Das Arpita](https://github.com/Horipriya-Arpita)
+-[@Horipriya Das Arpita](https://github.com/Horipriya-Arpita)
 REG NO: 2019831068
-![IMG_20230202_224344_143](https://user-images.githubusercontent.com/65423479/225098419-c3c1be3a-e645-427a-82b6-4112078b5144.jpg)
+-<img src="https://github.com/Jisan10667/SWE-project-250/blob/main/Image/IMG_20230202_224344_143.jpg" width="350" height="350 />
+
+
