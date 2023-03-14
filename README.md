@@ -19,7 +19,8 @@ Horipriya Das Arpita (Reg No: 2019831068)
 ## Screenshots
 
 By clicking this, you can enjoy all over the app-view through screenshots.
-![App Screenshot](https://drive.google.com/drive/folders/15mIXnjl2oRhJOoks3ktvwimEWitBrr_O?fbclid=IwAR1j5Q67W_g86yQ9C9pfwuzh7UcaImGN4ikSntOE8G3TtGWOhrWln2ECrSQ)
+[App Screenshot](https://github.com/Jisan10667/SWE-project-250/tree/main/Screenshots)
+[App Screenshot2](https://drive.google.com/drive/folders/15mIXnjl2oRhJOoks3ktvwimEWitBrr_O?fbclid=IwAR1j5Q67W_g86yQ9C9pfwuzh7UcaImGN4ikSntOE8G3TtGWOhrWln2ECrSQ)
 
 
 ## EAT-ME app overview
