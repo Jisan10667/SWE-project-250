@@ -36,5 +36,6 @@ It's a basic food-order app. Here customer enters, logs in, sign up/in, see rest
 
 Here , you can walkthrough all over the app through these charts given below :
 
-![load](Flowchartimage.png)
+![Flow chart image](https://user-images.githubusercontent.com/65423479/225095564-81468ebd-9c89-4660-93f3-9df15fca3c0c.png)
+
 
