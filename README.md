@@ -7,7 +7,7 @@ This is a part of the Android App Development of SWE 250 course supervised by Pa
 Jisan Ahmed (Reg No: 2019831040) &
 Horipriya Das Arpita (Reg No: 2019831068)
 
-![02](https://user-images.githubusercontent.com/65423479/225098811-8b1c159f-7c27-4c39-8186-f71312d787a5.jpg)
+![02](https://user-images.githubusercontent.com/65423479/225098811-8b1c159f-7c27-4c39-8186-f71312d787a5.jpg | width=100)
 ## EAT-ME app overview
 
 It's a basic food-order app. Here customer enters, logs in, sign up/in, see restaurant list, selects prefereble one, choose food that he/she wish to have, then orders it through card payment. 
@@ -35,6 +35,7 @@ By clicking this, you can enjoy all over the app-view through screenshots.
 
 [@Jisan Ahmed](https://github.com/Jisan10667)
 REG NO: 2019831040
+<img src="https://github.com/Jisan10667/SWE-project-250/blob/main/Image/1678814908588.jpg" width="250" height="250" />
 ![1678814908588](https://user-images.githubusercontent.com/65423479/225098485-90b7c764-894c-47ac-9899-4976cdc9d7ca.jpg)
 
 [@Horipriya Das Arpita](https://github.com/Horipriya-Arpita)
