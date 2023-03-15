@@ -13,10 +13,12 @@ Horipriya Das Arpita (Reg No: 2019831068)
 It's a basic food-order app. 
 1. Customer enters, 
 2. Signs up/in, 
-3. See restaurant list, 
-4. Selects prefereble one, 
-5. Choose food that he/she wish to have,  
-6. Orders it through card payment. Both pickup and delivery options are available here.
+3. Update Profile Details
+4. Update emaail or profile picture
+5. See restaurant list, 
+6. Selects prefereble one, 
+7. Choose food that he/she wish to have,  
+8. Orders it through card payment. Both pickup and delivery options are available here.
 
 
 ## Language and Tools
@@ -41,8 +43,7 @@ The detailed description of this video is given below :
 ## Screenshots
 
 By clicking this, you can enjoy all over the app-view through screenshots.
-[App Screenshot](https://github.com/Jisan10667/SWE-project-250/tree/main/Screenshots)
-[App Screenshot2](https://drive.google.com/drive/folders/15mIXnjl2oRhJOoks3ktvwimEWitBrr_O?fbclid=IwAR1j5Q67W_g86yQ9C9pfwuzh7UcaImGN4ikSntOE8G3TtGWOhrWln2ECrSQ)
+[App Screenshot](https://github.com/Jisan10667/SWE-project-250/tree/main/Screenshots)  
 
 
 ## Authors
@@ -54,7 +55,7 @@ REG NO: 2019831068
 
 -<img src="https://github.com/Jisan10667/SWE-project-250/blob/main/Image/1678814908588.jpg" width="350" height="350" />
 
-[@Jisan Ahmed](https://github.com/Jisan10667)
+-[@Jisan Ahmed](https://github.com/Jisan10667)
 REG NO: 2019831040
 
 
@@ -64,15 +65,16 @@ Firstly, This App will show you this page, after clicking this "Get Started Butt
 
 ![01](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/01.jpg)  
 
-This Main Menu will show you the "Sign Up" and "Sign In" Button on the Bottom of the Page. To Sign Up, simply click on the "Sign Up" Button. If you are already signed up, you can click the "Sign In" button.  
+This Main Menu will show you the "Sign Up" and "Sign In" Button on the Bottom of the Page. To Sign Up, simply click on the "Sign Up" Button. If you are already signed up, you can click the "Sign In" button.   
 
-![02](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/02.jpg)  
- 
+![02](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/02.jpg)   
  
 In the next page, you have to provide the necessary personal information.  
-![03](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/03.jpg)  
+![03](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/03.jpg)   
 
-Here we have added this date picker option to select your date of birth.  
+
+Here we have added this date picker option to select your date of birth.   
+
 ![04](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/04.jpg)   
 
 Now you can simply click "Sign Up" Button to continue. Or if you are already registered, scroll down and 
@@ -82,9 +84,9 @@ then click the text view "Sign in here" on the bottom right side of the page.
 
 Now an Alert Dialog box will be shown to verify your email address. After clicking "continue", you will go to your gmail.  
 
-![06](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/06.jpg) 
+![06](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/06.jpg)  
 
-Next, simply click on this link to verify your mail.  
+Next, simply click on this link to verify your mail.   
 
 ![07](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/07.jpg) 
 
@@ -108,12 +110,13 @@ In the next page click on "choose photo" Button
 
 ![10](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/10.jpg)  
 
-Select your image. Then Click "Upload photo".
-![11.0](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/11.0.jpg) 
+Select your image. Then Click "Upload photo".  
+
+![11.0](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/11.0.jpg)  
 
 After Uploading photo, your photo will be stored in the Firebase storage. 
 
-![11.1](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/11.1.jpg)  
+![11.1](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/11.1.jpg)   
 
 The User Profile page will show you your image. On clicking Action Bar Menu, you can update your profile, Update your email Or Logout. 
 
@@ -121,7 +124,7 @@ The User Profile page will show you your image. On clicking Action Bar Menu, you
 
 If you Click on update profile option next page will show your deatails. Then you can edit your Name, Dob, Gender Or mobile.
 You can also upload your profile picture clicking on "Upload Profile Picture Button". Or you can update your email address 
-by clicking on "Update Email" Button. Now simply click on "Update Profile" Button if done.  
+by clicking on "Update Email" Button. Now simply click on "Update Profile" Button if done.   
 
 ![13](https://github.com/Jisan10667/SWE-project-250/blob/main/Screenshots/13.jpg)  
 
